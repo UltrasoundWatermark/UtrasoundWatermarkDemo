@@ -7,7 +7,7 @@ from inference_runner import InferenceRunner
 
 class DemoRunner:
     MODEL_INPUT_SECONDS = 2.0
-    WATERMARK_STRENGTH = 0.2
+    WATERMARK_STRENGTH = 1.0
 
     def __init__(self, input_file: str, output_file: str, impl: InferenceRunner):
         self.input_file = input_file

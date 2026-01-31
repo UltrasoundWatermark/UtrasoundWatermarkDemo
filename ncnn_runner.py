@@ -28,5 +28,5 @@ class NcnnRunner(InferenceRunner):
             ex.input("in0", in0)
             _, out0 = ex.extract("out0")
             out = np.array(out0)
-            ret = np.argmax(out, 0).mean()
+            ret = 1 - np.argmax(out, 0).mean()
             return ret

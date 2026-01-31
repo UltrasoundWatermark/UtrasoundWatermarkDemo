@@ -22,4 +22,4 @@ class OrtRunner(InferenceRunner):
         output_names = self.detector_session.get_outputs()
         output = self.detector_session.run([output_names[0].name], {input_names[0].name: audio})
         output = output[0][0, :, :]
-        return np.argmax(output, 0).mean()
+        return 1 - np.argmax(output, 0).mean()
